@@ -9,7 +9,7 @@ audio_files.sort(key=lambda x: int(os.path.splitext(x)[0]))
 
 total_duration = 0.0
 
-for f in audio_files[:37]:  # Only the first 32 files
+for f in audio_files[:36]:
     with wave.open(os.path.join(folder_path, f), 'r') as wf:
         frames = wf.getnframes()
         rate = wf.getframerate()
